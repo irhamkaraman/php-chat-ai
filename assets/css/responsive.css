@@ -1,0 +1,106 @@
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 5px;
+  }
+
+  header h1 {
+    font-size: 10px;
+  }
+
+  nav {
+    padding: 5px;
+  }
+
+  .logout,
+  nav {
+    padding: 5px;
+  }
+
+  .logout a,
+  nav a {
+    margin: 0 5px;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  /* Main Section */
+  section {
+    padding: 20px;
+  }
+
+  .form-responsive {
+    padding: 20px;
+
+  }
+
+  .container {
+    padding: 20px;
+    max-height: 60vh; 
+  }
+
+  .container-responsive {
+    margin-top: 100px;
+    max-height: none;
+  }
+
+  .chat-ai {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  input,
+  button {
+    padding: 8px;
+    font-size: 1em;
+  }
+
+  /* Chat Section */
+  #chat {
+    padding: 10px;
+  }
+
+  .chat-form {
+    padding: 10px;
+  }
+
+  #chat-input {
+    width: 70%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  #chat-send {
+    width: 30%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  /* Message Styles */
+  .user-message {
+    max-width: 70%; /* Adjust message width */
+  }
+
+  .chat-message {
+    max-width: 90%; /* Adjust message width */
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+
+  /* Other Adjustments */
+  .box {
+    width: 100%;
+    margin: 5px;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}

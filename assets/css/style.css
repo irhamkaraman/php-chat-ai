@@ -1,0 +1,398 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #fff;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logout a {
+  color: #fff;
+  background-color: #ff0303;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.logout a:hover,
+nav a:hover {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 400px;
+  padding: 40px;
+  background: rgba(17, 17, 17, 0.5);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #fff;
+  max-height: 70vh; /* Set a max height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.chat-ai {
+  position: relative;
+  width: 40%;
+  padding: 50px;
+  padding: 20px;
+  max-height: 70vh; /* Set a max height for the chat area */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.chat-ai::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chat-ai {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.container p {
+  text-align: center;
+}
+
+.container h2 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.container h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 80%;
+  height: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: gray;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  color: #fff;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+  background: #23242a;
+  transition: background 0.3s ease-in-out;
+}
+
+.footer {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.footer > p {
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
+.error {
+  text-align: center;
+  color: red;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.success {
+  text-align: center;
+  color: red;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+span a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+span a:hover {
+  text-decoration: underline;
+}
+
+/* Chat Styles */
+
+#chat {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(61, 61, 61, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+#chat-input {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+#chat-send {
+  width: 20%;
+  padding: 10px;
+  margin: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#chat-send:hover {
+  background-color: #555;
+  transition: background 0.3s ease-in-out;
+}
+
+.ai-response {
+  animation: typing 1s steps(20, end), blink 0.75s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Add CSS animation for loading state */
+.loading::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.obrolan > h1 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-message {
+  text-align: right;
+  margin-top: 20px;
+  background: rgba(48, 48, 48, 0.3);
+  border-radius: 10px;
+  margin-left: auto;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.chat-message {
+  text-align: left;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.chat-message.ai-response p {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.chat-message.ai-response ul,
+.chat-message.ai-response ol {
+  text-align: left;
+  margin: 10px 20px;
+  padding: 0;
+}
+
+.chat-message.ai-response ul {
+  list-style-type: disc;
+}
+
+.chat-message.ai-response ol {
+  list-style-type: decimal;
+}
+
+.chat-message.ai-response ul li,
+.chat-message.ai-response ol li {
+  margin: 5px 0;
+}
+
+.chat-message.ai-response span {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.chat-message.ai-response .code-block {
+  background: rgba(54, 54, 54, 0.5);
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+.chat-message.ai-response.loading {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bold-large {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.chat-message.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.inline-code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
