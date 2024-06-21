@@ -14,8 +14,10 @@ Proyek PHP Chat AI adalah aplikasi web sederhana yang mengimplementasikan chatbo
 ## Cara Menggunakan
 1. Clone repositori ini: `git clone https://github.com/irhamkaraman/php-chat-ai.git`
 2. Pindah ke direktori proyek: `cd php-chat-ai`
-3. Buka aplikasi di browser dengan mengakses `index.php`.
-4. Mulai berinteraksi dengan AI dan nikmati fitur chatbot yang disediakan.
+3. Impor database `irham_23533740.sql` ke server MySQL Anda.
+4. Sesuaikan konfigurasi koneksi database di file `config.php`.
+5. Buka aplikasi di browser dengan mengakses `index.php`.
+6. Mulai berinteraksi dengan AI dan nikmati fitur chatbot yang disediakan.
 
 ## Kontribusi
 Anda bisa melakukan kontribusi pada proyek ini dengan melakukan fork repositori ini, lalu buat pull request untuk perubahan yang diusulkan.
